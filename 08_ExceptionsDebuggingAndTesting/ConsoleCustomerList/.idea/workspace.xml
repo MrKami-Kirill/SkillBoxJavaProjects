@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f368384a-e66f-46cb-aa05-8a5865081856" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/HomeWork_13_10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/src/main/java/MongoStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/src/main/java/RunMongo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/src/main/java/model/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/target/classes/MongoStorage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/target/classes/RunMongo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/target/classes/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_10/target/classes/model/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPBMetro/.idea/SPBMetro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SPBMetro/.idea/SPBMetro.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_8/target/classes/task2/RunMongo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_NoSQL/HomeWork_13_8/target/classes/task2/RunMongo.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1YJQ6rQYwSLUZ0A4p6O2nziv4a2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559109403663" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SPBMetro" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ConsoleCustomerList" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f368384a-e66f-46cb-aa05-8a5865081856" name="Default Changelist" comment="" />
+      <created>1559106634874</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559106634874</updated>
+    </task>
+    <task id="LOCAL-00001" summary="done homework 8.1.&#10;added Exceptions:&#10;1. email format&#10;2. phone format&#10;3. command format &quot;add&quot; &#10;4. if Map is empty and command = &quot;list&quot; or &quot;count&quot; then message: &quot;Map is Empty&quot;&#10;5. if Map does not contains parameter @name and command = remove then message: &quot;Map does not contains parameter @name&quot;">
+      <created>1582663746699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582663746699</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refresh homework 8.1.&#10;added new type Exceptions:&#10;1. ValidationException&#10;2. EmptyException&#10;3. NotContainException">
+      <created>1582791124861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582791124861</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="done homework 8.1.&#10;added Exceptions:&#10;1. email format&#10;2. phone format&#10;3. command format &quot;add&quot; &#10;4. if Map is empty and command = &quot;list&quot; or &quot;count&quot; then message: &quot;Map is Empty&quot;&#10;5. if Map does not contains parameter @name and command = remove then message: &quot;Map does not contains parameter @name&quot;" />
+    <MESSAGE value="refresh homework 8.1.&#10;added new type Exceptions:&#10;1. ValidationException&#10;2. EmptyException&#10;3. NotContainException" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh homework 8.1.&#10;added new type Exceptions:&#10;1. ValidationException&#10;2. EmptyException&#10;3. NotContainException" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1593704344679">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593704344679" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

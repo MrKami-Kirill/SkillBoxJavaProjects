@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <script src="js\jquery-3.5.0.min.js"></script>
+    <script src="js\script.js"></script>
+</head>
+<body>
+<h1>TO DO LIST</h1>
+<div id="list-form">
+    <form>
+        <h3>ADD TASK</h3>
+        <label>Task name:</label>
+        <input type="text" name="name"><br><label>Description:</label>
+        <input type="text" name="description"><br>
+        <label>Deadline:</label>
+        <input type="datetime-local" name="date"><br>
+        <input type="text" name="status" value="" hidden><br>
+        <button id="create-task">Create</button>
+    </form>
+</div>
+<br><br><br>
+<h2>Created Tasks</h2>
+<div id="task-list-created" style="color: #eaaa14">
+</div><br>
+
+<h2>In Progress Tasks</h2>
+<div id="task-list-in-progress" style="color: #3f48cc">
+</div><br>
+
+<h2>Completed Tasks</h2>
+<div id="task-list-completed" style="color: #15d62c">
+</div><br>
+
+<h2>Canceled Tasks</h2>
+<div id="task-list-canceled" style="color: #8a8a8a">
+</div><br>
+
+<h2>Closed Tasks</h2>
+<div id="task-list-closed" style="color: #000000">
+</div><br>
+
+<h2>Expired Tasks</h2>
+<div id="task-list-expired" style="color: #eb2020">
+</div><br>
+
+<h2>Deleted Tasks</h2>
+<div id="task-list-deleted" style="color: #20e1eb">
+</div><br>
+
+</body>
+</html>

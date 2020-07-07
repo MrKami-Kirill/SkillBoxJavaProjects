@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js\jquery-3.5.0.min.js"></script>
+    <script src="js\adminScript.js"></script>
+</head>
+<body>
+<h1>Admin Page (</b>UserCount=<span th:text="${usersCount}">0</span>)</h1>
+<br>
+<a href="/login">Back</a>
+<br><br><br>
+<h1>User List</h1>
+<div id="user-list">
+    <div th:each="user : ${allUsers}">
+        <b>User:</b></b><a href="#" class="user-link" th:attr="data-id=${user.id}" th:text="${user.username}"></a>
+        <button id="delete-user" onclick="window.location.reload();">Delete</button>
+    </div>
+</div><br>
+</body>
+</html>

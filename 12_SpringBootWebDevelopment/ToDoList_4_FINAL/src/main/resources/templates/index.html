@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <script src="js\jquery-3.5.1.min.js"></script>
+    <script src="js\script.js"></script>
+</head>
+<body>
+<span sec:authorize="isAuthenticated()">
+<h3 th:inline="text">Hello, [[${#httpServletRequest.remoteUser}]]!</h3>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</span>
+<br>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <form action="/admin" target="_self">
+        <button>UserList</button>
+    </form>
+
+</div>
+<h1>TO DO LIST
+    (<b>TaskCount=<span th:text="${taskCount}">0</span></b>)
+</h1>
+<div id="list-form">
+    <form>
+        <h3>ADD TASK</h3>
+        <label>Task name:</label>
+        <input type="text" name="name"><br>
+        <label>Description:</label>
+        <input type="text" name="description"><br>
+        <label>Deadline:</label>
+        <input type="datetime-local" name="date"><br>
+        <input type="text" name="status" value="" hidden><br>
+        <button id="create-task" onclick="windowReload">Create</button>
+    </form>
+</div>
+<br><br><br>
+<h2>Created Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCreated()}" th:attr="id=${task.id}" style="color: #eaaa14">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+            <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+            <span th:text="${task.description}"></span><br>
+        <a href="#" class="in-progress-link" onclick="windowReload">In progress</a>
+        <a href="#" class="canceled-link" onclick="windowReload">Cancel</a>
+    </div>
+</div><br>
+
+<h2>In Progress Tasks</h2>
+<div th:each="task : ${taskList}" >
+    <div th:if="${task.isInProgress()}" th:attr="id=${task.id}" style="color: #3f48cc">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <a href="#" class="completed-link" onclick="windowReload">Complete</a>
+        <a href="#" class="canceled-link" onclick="windowReload">Cancel</a>
+    </div>
+</div><br>
+
+<h2>Completed Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCompleted()}" th:attr="id=${task.id}" style="color: #15d62c">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <span th:text="${task.description}"></span>
+        <a href="#" class="closed-link" onclick="windowReload">Closed</a>
+    </div>
+</div><br>
+
+<h2>Canceled Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCanceled()}" th:attr="id=${task.id}" style="color: #8a8a8a">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <a href="#" class="in-progress-link" onclick="windowReload">In progress</a>
+        <a href="#" class="deleted-link" onclick="windowReload">Delete</a>
+    </div>
+</div><br>
+
+<h2>Closed Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isClosed()}" th:attr="id=${task.id}" style="color: #dced27">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <a href="#" class="deleted-link" onclick="windowReload">Delete</a>
+    </div>
+</div><br>
+
+<h2>Expired Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isExpired()}" th:attr="id=${task.id}" style="color: #eb2020">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <a href="#" class="del-link" onclick="windowReload">Delete from database</a>
+    </div>
+</div><br>
+
+<h2>Deleted Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isDeleted()}" th:attr="id=${task.id}" style="color: #20e1eb">
+        <b th:text="${task.date} + ' '"></b>
+        <span th:text="${task.status} + ': '"></span><br>
+        <b style="color: #000000">name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b style="color: #000000">description: </b>
+        <span th:text="${task.description}"></span><br>
+        <a href="#" class="del-link" onclick="windowReload">Delete from database</a>
+    </div>
+</div>
+<br>
+</body>
+</html>

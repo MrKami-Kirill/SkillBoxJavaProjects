@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration page</title>
+</head>
+<body>
+<h1>Registration page</h1>
+<a href="/login">Back</a>
+<br><br><br>
+<b><span th:text="${usernameError}" style="color: #eb2020"></span></b>
+<form action="/registration" method="post">
+    <div><label> User Name:<b style="color: #eb2020">*</b>: <input type="text" name="username" required placeholder="Please, indicate your username"/> </label></div>
+    <div><label> Password<b style="color: #eb2020">*</b>: <input type="password" name="password" required placeholder="Please, indicate your password"/> </label></div>
+    <div><label> Confirm Password<b style="color: #eb2020">*</b>: <input type="password" name="passwordConfirm" required placeholder="Please, confirm your password"/> </label>
+        <span th:text="${passwordError}" style="color: #eb2020"></span></div>
+    <div><label> First Name: <input type="text" name="firstname"/> </label></div>
+    <div><label> Last Name: <input type="text" name="lastname"/> </label></div>
+    <div><label> Middle Name: <input type="text" name="middlename"/> </label></div>
+    <div><label> Birth Date: <input type="date" name="birthdate"/> </label></div>
+    <div><label> E-mail: <input type="text" name="email"/> </label></div>
+    <div><label> Admin Code: <input type="text" name="adminCode" placeholder="Only for ADMIN role"/> </label></div>
+    <div><input type="submit" value="Register"/></div>
+    <br>
+    <font size="1"><b style="color: #eb2020">*</b> - required fields</font>
+</form>
+</body>
+</html>

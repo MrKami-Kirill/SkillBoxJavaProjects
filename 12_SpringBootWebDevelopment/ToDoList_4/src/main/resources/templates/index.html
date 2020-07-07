@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <script src="js\jquery-3.5.0.min.js"></script>
+    <script src="js\script.js"></script>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div sec:authorize="hasRole('ADMIN')">
+    <a href="/admin">Admin page</a>
+</div>
+<div sec:authorize="isAuthenticated()">
+<h1>TO DO LIST
+    (<b>TaskCount=<span th:text="${taskCount}">0</span></b>)
+</h1>
+<div id="list-form">
+    <form>
+        <h3>ADD TASK</h3>
+        <label>Task name:</label>
+        <input type="text" name="name"><br>
+        <label>Description:</label>
+        <input type="text" name="description"><br>
+        <label>Deadline:</label>
+        <input type="datetime-local" name="date"><br>
+        <input type="text" name="status" value="" hidden><br>
+        <button id="create-task" onclick="window.location.reload();">Create</button>
+    </form>
+</div>
+<br><br><br>
+<h2>Created Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCreated()}" style="color: #eaaa14">
+        <b th:text="${task.date} + ': '"></b>
+        <span th:text="${task.name}"></span><br>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>In Progress Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isInProgress()}" style="color: #3f48cc">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>Completed Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCompleted()}" style="color: #15d62c">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>Canceled Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isCanceled()}" style="color: #8a8a8a">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>Closed Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isClosed()}" style="color: #dced27">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>Expired Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isExpired()}" style="color: #eb2020">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div><br>
+
+<h2>Deleted Tasks</h2>
+<div th:each="task : ${taskList}">
+    <div th:if="${task.isDeleted()}" style="color: #20e1eb">
+        <b th:text="'(ID=' + ${task.id} + ')'" style="color: #000000"></b>
+        <b th:text="${task.date} + ': '" style="color: #000000"></b><br>
+        <b>Name: </b>
+        <span th:text="${task.name}"></span><br>
+        <b>Description: </b>
+        <span th:text="${task.description}"></span>
+    </div>
+</div>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="affc0b2c-f70e-4063-947e-90a37d08773a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/MaverRepository/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/MaverRepository/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/MaverRepository/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/MaverRepository/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/MaverRepository/MaverRepository.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/Module 9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/out/production/Module 9/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07_AdvancedOOPFeatures/Module 9/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/09_FilesAndNetwork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08_ExceptionsDebuggingAndTesting/SPBMetro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08_ExceptionsDebuggingAndTesting/SPBMetro/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1YTQB0t0dLsEMVALy7LAqrksxU1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="HomeWork9.1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="affc0b2c-f70e-4063-947e-90a37d08773a" name="Default Changelist" comment="" />
+      <created>1582963964076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582963964076</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="485" y="71" key="#Main" timestamp="1582976362969">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="71" key="#Main/0.0.1536.824@0.0.1536.824" timestamp="1582976362969" />
+    <state x="361" y="71" key="#Project_Structure" timestamp="1582976275381">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1582976275381" />
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582976362121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1582976362121" />
+    <state x="297" y="7" key="CommitChangelistDialog2" timestamp="1582976099160">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="297" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582976099160" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1582997815028">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582997815028" />
+    <state x="209" y="33" key="new project wizard" timestamp="1582997840700">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1582997840700" />
+  </component>
+</project>

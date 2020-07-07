@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1b08138-c41a-4f72-b7cc-fee3f3da950d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/12_SpringBootWebDevelopment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/ToDoList_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/src/main/java/main/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToDoList_2/src/main/resources/static/js/jquery-3.5.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookLibrary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookLibrary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/ToDoList.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/ToDoList.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/src/main/java/main/DefaultController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/src/main/java/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/META-INF/ToDoList.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/main/ListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/main/Storage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/main/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/static/js/jquery-3.5.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList/target/classes/static/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList_1/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ayiUtwTLRaon4xFZ9aLikBb280" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1b08138-c41a-4f72-b7cc-fee3f3da950d" name="Default Changelist" comment="" />
+      <created>1587714253214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587714253214</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587714259009">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587714259009" />
+  </component>
+</project>

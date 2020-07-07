@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+</head>
+<body>
+<h1>Registration page</h1>
+<a href="/login">Back</a>
+<br><br><br>
+<b><span th:text="${usernameError}" style="color: #eb2020"></span></b>
+<form action="/registration" method="post">
+    <h1>User</h1>
+    <!--USER NAME-->
+    <div class="row">
+        <div class="label">
+            <label for="username"><b>User name</b><b style="color: #eb2020">*</b><b>:</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="username" name="username" required>
+        </div>
+    </div>
+    <!--PASSWORD-->
+    <div class="row">
+        <div class="label">
+            <label for="password"><b>Password</b><b style="color: #eb2020">*</b><b>:</b></label>
+        </div>
+        <div class="value">
+            <input type="password" id="password" name="password" required>
+        </div>
+    </div>
+    <!--CONFIRM PASSWORD-->
+    <div class="row">
+        <div class="label">
+            <label for="password"><b>Confirm password</b><b style="color: #eb2020">*</b><b>:</b></label>
+            <span th:text="${passwordError}" style="color: #eb2020"></span>
+        </div>
+        <div class="value">
+            <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+        </div>
+    </div>
+    <h1>Personal information</h1>
+    <!--DADATA FIO LOGIC-->
+    <div>
+        <section class="container">
+            <b>Enter your fullname, please:</b><b style="color: #eb2020">*</b>
+            <!--FULL NAME-->
+            <div class="row">
+                <input id="fullname" name="fullname" type="text" required/>
+            </div>
+            <!--SURNAME-->
+            <div class="row">
+                <div class="label">
+                    <label for="surname"><b>Last name:</b><b style="color: #eb2020">**</b></label>
+                </div>
+                <div class="value">
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+            </div>
+            <!--NAME-->
+            <div class="row">
+                <div class="label">
+                    <label for="name"><b>First name:</b><b style="color: #eb2020">**</b></label>
+                </div>
+                <div class="value">
+                    <input type="text" id="name" name="name" required>
+                </div>
+            </div>
+            <!--PATRONYMIC-->
+            <div class="row">
+                <div class="label">
+                    <label for="patronymic"><b>Middle name:</b><b style="color: #eb2020">**</b></label>
+                </div>
+                <div class="value ">
+                    <input type="text" id="patronymic" name="patronymic" required>
+                </div>
+            </div>
+            <!--GENDER-->
+            <div class="row">
+                <div class="label">
+                    <label for="gender"><b>Gender:</b><b style="color: #eb2020">**</b></label>
+                </div>
+                <div class="value">
+                    <input type="text" id="gender" name="gender" required>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+        <script>
+            $("#fullname").suggestions({
+              token: "d865401c5d7d617a0acfee77996bcf3791cd673b",
+              type: "NAME",
+              onSelect: showSelected,
+              onSelectNothing: clearSelected
+            });
+
+            function ruGender(gender) {
+              return gender === "MALE" ? "мужской" :
+                gender === "FEMALE" ? "женский" :
+                "не определен";
+            }
+
+
+            function showSelected(suggestion) {
+              var fullname = suggestion.data;
+              $("#surname").val(fullname.surname);
+              $("#name").val(fullname.name);
+              $("#patronymic").val(fullname.patronymic);
+              $("#gender").val(ruGender(fullname.gender));
+            }
+
+            function clearSelected() {
+              $("#surname").val("");
+              $("#name").val("");
+              $("#patronymic").val("");
+              $("#gender").val("");
+            }
+        </script>
+    </div>
+    <!--BIRTH DATE-->
+    <div class="row">
+        <div class="label">
+            <label for="birthdate"><b>Birth date:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+    </div>
+    <!--PHONE-->
+    <div class="row">
+        <div class="label">
+            <label for="phone"><b>Phone:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX"
+                   pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+        </div>
+    </div>
+    <h1>Passport information</h1>
+<!--    &lt;!&ndash;DOCUMENT TYPE&ndash;&gt;-->
+<!--    <select class="form-control" name="documentType" id="documentType">-->
+<!--        <option th:each="user : ${documentTypeEnum}"-->
+<!--                th:text="${user.documentType}">-->
+<!--        </option>-->
+<!--    </select>-->
+    </div>
+    <!--PASSPORT-->
+    <div class="row">
+        <div class="label">
+            <label for="passport"><b>Passport:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="passport" name="passport" required>
+        </div>
+    </div>
+    <!--CODE & ISSUED BY-->
+    <div>
+        <section class="result">
+            <div class="row">
+                <label><b>Code:</b><b style="color: #eb2020">*</b></label>
+                <input type="text" id="code" name="code" required>
+            </div>
+            <div class="row">
+                <label><b>Issued by:</b><b style="color: #eb2020">**</b></label><br>
+                <textarea type="text" id="issuedBy" rows="3" name="issuedBy" required></textarea>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+            <script>
+                var token = "d865401c5d7d617a0acfee77996bcf3791cd673b";
+                function formatResult(value, currentValue, suggestion) {
+                  suggestion.value = suggestion.data.code;
+                  return suggestion.data.code + " — " + suggestion.data.name;
+                }
+
+                function showSuggestion(suggestion) {
+                  console.log(suggestion);
+                  $("#issuedBy").val(suggestion.data.name);
+                }
+
+                function clearSuggestion() {
+                  $("#issuedBy").val("");
+                }
+
+                $("#code").suggestions({
+                  token: token,
+                  type: "fms_unit",
+                  formatResult: formatResult,
+                  onSelect: showSuggestion,
+                  onSelectNothing: clearSuggestion
+                });
+            </script>
+        </section>
+    </div>
+    <!--ISSUE DATE-->
+    <div class="row">
+        <div class="label">
+            <label for="issueDate"><b>Issue date:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="date" id="issueDate" name="issueDate" required>
+            <span th:text="${issueDocumentDateNotValid}" style="color: #eb2020"></span>
+        </div>
+    </div>
+    <!--BIRTH BLACE-->
+    <div class="row">
+        <div class="label">
+            <label for="birthPlace"><b>Birth place:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="birthPlace" name="birthPlace" required>
+        </div>
+    </div>
+    <h1>Address information</h1>
+    <!--REGISTRATION ADDRESS-->
+    <div class="row">
+        <div class="label">
+            <label for="registrationAddress"><b>Registration address:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="registrationAddress" name="registrationAddress" required>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+        <script>
+            $("#registrationAddress").suggestions({
+                token: "d865401c5d7d617a0acfee77996bcf3791cd673b",
+                type: "ADDRESS",
+                onSelect: function(suggestion) {
+                    console.log(suggestion);
+                }
+            });
+        </script>
+    </div>
+    <!--ACTUAL ADDRESS-->
+    <div class="row">
+        <div class="label">
+            <label for="actualAddress"><b>Actual address:</b><b style="color: #eb2020">*</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="actualAddress" name="actualAddress" required>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+        <script>
+            $("#actualAddress").suggestions({
+                token: "d865401c5d7d617a0acfee77996bcf3791cd673b",
+                type: "ADDRESS",
+                onSelect: function(suggestion) {
+                    console.log(suggestion);
+                }
+            });
+        </script>
+    </div>
+    <!--E-MAIL-->
+    <section class="container">
+        <div class="row">
+            <div class="label">
+                <label for="email"><b>E-mail:</b></label>
+            </div>
+            <div class="value">
+                <input type="text" id="email" name="email" />
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+            <script>
+                $("#email").suggestions({
+                  token: "d865401c5d7d617a0acfee77996bcf3791cd673b",
+                  type: "EMAIL",
+                  onSelect: function(suggestion) {
+                    console.log(suggestion);
+                  }
+                });
+            </script>
+        </div>
+    </section>
+    <!--ADMIN CODE-->
+    <div class="row">
+        <div class="label">
+            <label for="adminCode"><b>Admin Code:</b></label>
+        </div>
+        <div class="value">
+            <input type="text" id="adminCode" name="adminCode">
+        </div>
+    </div><br>
+    <div><input type="submit" value="Register"/></div>
+    <font size="1"><b style="color: #eb2020">*</b> - required fields</font>
+    <br>
+    <font size="1"><b style="color: #eb2020">**</b> - required fields, filled automatically</font>
+</form>
+</body>
+</html>
