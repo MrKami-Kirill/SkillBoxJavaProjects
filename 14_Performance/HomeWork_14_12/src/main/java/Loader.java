@@ -1,3 +1,4 @@
+import lombok.extern.log4j.Log4j2;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -12,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Log4j2
 public class Loader
 {
     private static SimpleDateFormat birthDayFormat = new SimpleDateFormat("yyyy.MM.dd");
@@ -22,15 +24,11 @@ public class Loader
 
     public static void main(String[] args) throws Exception
     {
-        String fileName = "res/data-1M.xml";
-        long start = System.currentTimeMillis();
+        String fileName = "D:\\Downloads\\VoteAnalyzer\\res\\data-18M.xml";
+
         long memoryUsage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         DOMParseFile(fileName);
-        System.out.println("Duration loaded to the DB: "+ (System.currentTimeMillis() - start) + " ms.");
-        DBConnection.printVoterCounts();
-        start = System.currentTimeMillis();
-        DBConnection.customSelect();
-        System.out.println("Query duration: "+ (System.currentTimeMillis() - start) + " ms.");
+
         //Printing results
 //        System.out.println("Voting station work times: ");
 //        for(Integer votingStation : voteStationWorkTimes.keySet())
@@ -38,24 +36,18 @@ public class Loader
 //            WorkTime workTime = voteStationWorkTimes.get(votingStation);
 //            System.out.println("\t" + votingStation + " - " + workTime);
 //        }
-//        System.out.println("Duplicated voters: ");
-//        for(Voter voter : voterCounts.keySet())
-//        {
-//            int count = voterCounts.get(voter);
-//            if(count > 1) {
-//                System.out.println("\t" + voter + " - " + count);
-//            }
-//        }
         memoryUsage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() - memoryUsage;
-        System.out.println("Usage memory DOMParser: " + memoryUsage + " bytes.");
+        System.out.println("Usage memory DOMParser: " + memoryUsage / (1_048_576) + " Mb.");
+        //log.info("Usage memory DOMParser: " + memoryUsage / (1_048_576) + " Mb.");
 
         System.out.println("--------------------------------------------------");
         Thread.sleep(1000);
 
         memoryUsage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-//        SAXParseFile(fileName);
-//        memoryUsage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() - memoryUsage;
-//        System.out.println("Usage memory SAXParser: " + memoryUsage + " bytes.");
+        SAXParseFile(fileName);
+        memoryUsage = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() - memoryUsage;
+        System.out.println("Usage memory SAXParser: " + memoryUsage / (1_048_576) + " Mb.");
+        //log.info("Usage memory SAXParser: " + memoryUsage / (1_048_576) + " Mb.");
     }
 
     private static void SAXParseFile (String fileName) throws IOException, SAXException, ParserConfigurationException {
@@ -74,6 +66,15 @@ public class Loader
 
         findEqualVoters(doc);
         //fixWorkTimes(doc);
+
+        System.out.println("Duplicated voters: ");
+        for(Voter voter : voterCounts.keySet())
+        {
+            int count = voterCounts.get(voter);
+            if(count > 1) {
+                System.out.println("\t" + voter + " - " + count);
+            }
+        }
     }
 
     private static void findEqualVoters(Document doc) throws Exception
@@ -86,14 +87,12 @@ public class Loader
             NamedNodeMap attributes = node.getAttributes();
 
             String name = attributes.getNamedItem("name").getNodeValue();
-//            Date birthDay = birthDayFormat.parse(attributes.getNamedItem("birthDay").getNodeValue());
-            String birthDay = attributes.getNamedItem("birthDay").getNodeValue();
-            DBConnection.countVoter(name, birthDay);
-//            Voter voter = new Voter(name, birthDay);
-//            Integer count = voterCounts.get(voter);
-//            voterCounts.put(voter, count == null ? 1 : count + 1);
+            Date birthDay = birthDayFormat.parse(attributes.getNamedItem("birthDay").getNodeValue());
+
+            Voter voter = new Voter(name, birthDay);
+            Integer count = voterCounts.get(voter);
+            voterCounts.put(voter, count == null ? 1 : count + 1);
         }
-        DBConnection.executeMultiInsert();
     }
 
     private static void fixWorkTimes(Document doc) throws Exception
